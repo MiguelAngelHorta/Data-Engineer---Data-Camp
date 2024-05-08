@@ -1,0 +1,8 @@
+SELECT lo.client_id,
+       con.contract_date,
+       lo.principal_amount,
+       lo.loan_type
+FROM loan lo
+JOIN contract con ON lo.contract_id = con.contract_id
+JOIN client cli ON lo.client_id = cli.client_id
+WHERE con.contract_date >= '2022-01-01' AND cli.country = 'USA';
