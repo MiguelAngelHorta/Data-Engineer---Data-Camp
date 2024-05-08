@@ -1,0 +1,12 @@
+SELECT 
+    client_id,
+    SUBSTRING(TO_CHAR(date_of_birth::DATE, 'YYYY-MM- DD'), 1, 11) AS date_of_birth,
+    CASE
+        WHEN LOWER(employment_status) LIKE 'em%' THEN 'employed'
+        WHEN LOWER(employment_status) LIKE 'un%' THEN 'unemployed'
+        WHEN LOWER(employment_status) IN ('part-time', 'full-time') THEN 'employed'
+        ELSE employment_status
+    END AS employment_status,
+    UPPER(country) AS country
+FROM 
+    client
