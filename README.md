@@ -132,7 +132,6 @@ GROUP BY lo.loan_type, cli.country;
 
 
 
-![image](https://github.com/MiguelAngelHorta/Data-Engineer---Data-Camp/assets/106134627/36babf4a-3827-42e5-bbf9-819d1f08df33)
 
 
 ## Mental Health Project
