@@ -1,0 +1,6 @@
+SELECT lo.loan_type,
+       cli.country,
+       AVG(lo.interest_rate) AS avg_rate
+FROM loan lo
+JOIN client cli ON lo.client_id = cli.client_id
+GROUP BY lo.loan_type, cli.country;
